@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Disease Helper - Bangladesh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      background: #e9ffe9;
+      border: 1px solid #8f8;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pet Disease Helper (BD)</h1>
+    <select id="disease">
+      <option value="">Select Disease</option>
+      <!-- Example with 100 diseases -->
+      <option value="rabies">Rabies</option>
+      <option value="parvovirus">Parvovirus</option>
+      <option value="distemper">Canine Distemper</option>
+      <option value="fleas">Fleas & Ticks</option>
+      <option value="mange">Mange</option>
+      <option value="felineCold">Feline Upper Respiratory</option>
+      <option value="worms">Worm Infection</option>
+      <option value="earInfection">Ear Infection</option>
+      <option value="diarrhea">Diarrhea</option>
+      <option value="vomiting">Vomiting</option>
+      <option value="kennelCough">Kennel Cough</option>
+      <option value="leptospirosis">Leptospirosis</option>
+      <option value="heartworm">Heartworm</option>
+      <option value="panleukopenia">Feline Panleukopenia</option>
+      <option value="calicivirus">Feline Calicivirus</option>
+      <option value="toxoplasmosis">Toxoplasmosis</option>
+      <option value="lyme">Lyme Disease</option>
+      <option value="brucellosis">Brucellosis</option>
+      <option value="ringworm">Ringworm</option>
+      <option value="coccidiosis">Coccidiosis</option>
+      <option value="giardia">Giardiasis</option>
+      <option value="hepatitis">Canine Hepatitis</option>
+      <option value="pyometra">Pyometra</option>
+      <option value="bloat">Bloat (GDV)</option>
+      <option value="pancreatitis">Pancreatitis</option>
+      <option value="liverDisease">Liver Disease</option>
+      <option value="kidneyDisease">Kidney Disease</option>
+      <option value="conjunctivitis">Conjunctivitis</option>
+      <option value="glaucoma">Glaucoma</option>
+      <option value="cataracts">Cataracts</option>
+      <option value="skinAllergies">Skin Allergies</option>
+      <option value="foodAllergies">Food Allergies</option>
+      <option value="eczema">Eczema</option>
+      <option value="arthritis">Arthritis</option>
+      <option value="hipDysplasia">Hip Dysplasia</option>
+      <option value="epilepsy">Epilepsy</option>
+      <option value="depression">Pet Depression</option>
+      <option value="anxiety">Pet Anxiety</option>
+      <option value="aggression">Aggression</option>
+      <option value="obesity">Obesity</option>
+      <option value="malnutrition">Malnutrition</option>
+      <option value="heatStroke">Heat Stroke</option>
+      <option value="coldStress">Cold Stress</option>
+      <option value="tickFever">Tick Fever</option>
+      <option value="scabies">Scabies</option>
+      <option value="tetanus">Tetanus</option>
+      <option value="neoplasia">Neoplasia</option>
+      <option value="tumors">Tumors</option>
+      <option value="hematoma">Ear Hematoma</option>
+      <option value="anemia">Anemia</option>
+      <option value="pneumonia">Pneumonia</option>
+      <option value="asthma">Asthma</option>
+      <option value="bronchitis">Bronchitis</option>
+      <option value="pharyngitis">Pharyngitis</option>
+      <option value="laryngitis">Laryngitis</option>
+      <option value="stomatitis">Stomatitis</option>
+      <option value="dentalDisease">Dental Disease</option>
+      <option value="bladderStones">Bladder Stones</option>
+      <option value="urinaryInfection">Urinary Tract Infection</option>
+      <option value="testicularCancer">Testicular Cancer</option>
+      <option value="prostateEnlargement">Prostate Enlargement</option>
+      <option value="analGland">Anal Gland Impaction</option>
+      <option value="reproductiveDisorder">Reproductive Disorder</option>
+      <option value="lactationIssue">Lactation Issues</option>
+      <option value="pregnancyComplication">Pregnancy Complications</option>
+      <option value="abortion">Spontaneous Abortion</option>
+      <option value="snakeBite">Snake Bite</option>
+      <option value="spiderBite">Spider Bite</option>
+      <option value="beeSting">Bee Sting</option>
+      <option value="poisoning">Poisoning</option>
+      <option value="chemicalBurn">Chemical Burn</option>
+      <option value="trauma">Trauma</option>
+      <option value="fracture">Fracture</option>
+      <option value="sprain">Sprain</option>
+      <option value="lameness">Lameness</option>
+      <option value="tendonInjury">Tendon Injury</option>
+      <option value="muscleWasting">Muscle Wasting</option>
+      <option value="eyeUlcer">Corneal Ulcer</option>
+      <option value="cornealDisorder">Corneal Disorder</option>
+      <option value="opticNerve">Optic Nerve Damage</option>
+      <option value="neurological">Neurological Disorder</option>
+      <option value="vertigo">Vertigo</option>
+      <option value="seizures">Seizures</option>
+      <option value="spinalInjury">Spinal Injury</option>
+      <option value="paralysis">Paralysis</option>
+      <option value="tickParalysis">Tick Paralysis</option>
+      <option value="bloodParasite">Blood Parasite Infection</option>
+      <option value="fungalInfection">Fungal Infection</option>
+      <option value="bacterialInfection">Bacterial Infection</option>
+      <option value="viralInfection">Viral Infection</option>
+      <option value="vaccinationReaction">Vaccination Reaction</option>
+      <option value="immuneDisorder">Immune Disorder</option>
+      <option value="autoimmune">Autoimmune Disease</option>
+      <option value="growthDisorder">Growth Disorder</option>
+      <option value="behavioralIssue">Behavioral Disorder</option>
+      <option value="territorial">Territorial Behavior</option>
+      <option value="excessiveBarking">Excessive Barking</option>
+      <option value="coprophagia">Coprophagia</option>
+      <option value="furLoss">Fur Loss</option>
+    </select>
+    <button onclick="getTreatment()">Get Treatment & Location</button>
+
+    <div class="result" id="treatmentResult"></div>
+    <div class="result" id="locationResult"></div>
+  </div>
+
+  <script>
+    const treatments = {
+      rabies: {
+        treatment: "Immediate veterinary attention needed. Keep the pet isolated.",
+        doctor: "Dr. Aminul, Rabies Specialist, Dhaka"
+      },
+      parvovirus: {
+        treatment: "Hydration and electrolyte therapy. See a vet ASAP.",
+        doctor: "Dr. Sumiya, Pet Care Hospital, Chattogram"
+      },
+      distemper: {
+        treatment: "Supportive care. Consult vet immediately.",
+        doctor: "Dr. Shahin, Distemper Clinic, Rajshahi"
+      },
+      fleas: {
+        treatment: "Use flea shampoo or topical flea medication.",
+        doctor: "Dr. Kamal, Pet Vet BD, Sylhet"
+      },
+      mange: {
+        treatment: "Medicated baths and prescribed ivermectin.",
+        doctor: "Dr. Rafiq, Animal Care, Khulna"
+      },
+      felineCold: {
+        treatment: "Warm environment and hydration. Vet if symptoms persist.",
+        doctor: "Dr. Lina, Cat Wellness Center, Barishal"
+      },
+      worms: {
+        treatment: "Deworming tablets. Maintain hygiene.",
+        doctor: "Dr. Tania, Pet Life BD, Mymensingh"
+      },
+      earInfection: {
+        treatment: "Clean ears and use prescribed ear drops.",
+        doctor: "Dr. Jewel, Vet Point, Dhaka"
+      },
+      diarrhea: {
+        treatment: "Bland diet and hydration. See vet if persists.",
+        doctor: "Dr. Nabila, Animal Health BD, Cumilla"
+      },
+      vomiting: {
+        treatment: "Small frequent meals. Vet check-up advised.",
+        doctor: "Dr. Reza, PetMed BD, Rangpur"
+      }
+      // Extend for more diseases...
+    };
+
+    function getTreatment() {
+      const disease = document.getElementById('disease').value;
+      const resultDiv = document.getElementById('treatmentResult');
+      const locationDiv = document.getElementById('locationResult');
+
+      if (!disease || !treatments[disease]) {
+        resultDiv.innerHTML = 'Please select a valid disease.';
+        locationDiv.innerHTML = '';
+        return;
+      }
+
+      const info = treatments[disease];
+      resultDiv.innerHTML = `<strong>Primary Treatment:</strong> ${info.treatment}<br><strong>Suggested Doctor:</strong> ${info.doctor}`;
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          const mapsUrl = `https://www.google.com/maps/search/veterinary+hospital+near+me/@${lat},${lon},15z`;
+          locationDiv.innerHTML = `<a href="${mapsUrl}" target="_blank">Click here to find nearby veterinary hospitals</a>`;
+        }, () => {
+          locationDiv.innerHTML = 'Location access denied. Enable GPS to see nearby hospitals.';
+        });
+      } else {
+        locationDiv.innerHTML = 'Geolocation is not supported by your browser.';
+      }
+    }
+  </script>
+</body>
+</html>

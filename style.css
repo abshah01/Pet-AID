@@ -1,0 +1,106 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #eef2f7;
+  color: #333;
+  margin: 0;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+.container {
+  background: white;
+  max-width: 480px;
+  width: 100%;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #2a9d8f;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+select {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #2a9d8f;
+  outline: none;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  background: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #21867a;
+}
+
+.result {
+  background: #daf1f0;
+  border: 1px solid #2a9d8f;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-top: 25px;
+  text-align: left;
+  font-size: 1rem;
+  color: #004d40;
+  line-height: 1.5;
+  box-shadow: 0 3px 6px rgba(42, 157, 143, 0.15);
+}
+
+#locationResult a {
+  color: #05668d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#locationResult a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .container {
+    padding: 25px 20px;
+  }
+
+  button,
+  select {
+    font-size: 1rem;
+  }
+}
